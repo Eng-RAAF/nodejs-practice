@@ -7,6 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
+    "build": "prisma generate && echo 'Build complete'",
+    "postinstall": "prisma generate",
     "db:generate": "npx prisma generate",
     "db:push": "npx prisma db push",
     "prisma:generate": "npx prisma generate",
@@ -25,9 +27,8 @@
   "dependencies": {
     "@prisma/client": "^5.19.1",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
-  },
-  "devDependencies": {
+    "express": "^4.18.2",
     "prisma": "^5.19.1"
-  }
+  },
+  "devDependencies": {}
 }
