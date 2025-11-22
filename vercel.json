@@ -2,14 +2,11 @@
   "buildCommand": "prisma generate && npm run build",
   "installCommand": "npm install",
   "framework": null,
-  "outputDirectory": ".",
-  "functions": {
-    "server.js": {
-      "runtime": "nodejs18.x"
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.js"
     }
-  },
-  "env": {
-    "PRISMA_GENERATE_DATAPROXY": "false"
-  }
+  ]
 }
 
