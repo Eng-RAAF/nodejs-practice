@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "prisma generate && npm run build",
   "installCommand": "npm install",
   "framework": null,
   "outputDirectory": ".",
@@ -7,6 +7,9 @@
     "server.js": {
       "runtime": "nodejs18.x"
     }
+  },
+  "env": {
+    "PRISMA_GENERATE_DATAPROXY": "false"
   }
 }
 
