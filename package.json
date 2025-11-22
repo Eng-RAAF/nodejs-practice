@@ -4,11 +4,15 @@
   "description": "Class Management System Backend - Node.js/JavaScript without database",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "prisma generate",
     "postinstall": "prisma generate",
+    "build": "prisma generate",
+    "vercel-build": "prisma generate",
     "db:generate": "npx prisma generate",
     "db:push": "npx prisma db push",
     "prisma:generate": "npx prisma generate",
@@ -17,6 +21,9 @@
     "prisma:migrate": "npx prisma migrate dev",
     "check-prisma": "node scripts/check-prisma.js"
   },
+
+ 
+  
   "keywords": [
     "class-management",
     "nodejs",
